@@ -1,0 +1,313 @@
+footer {
+    background: black;
+    color: white;
+    padding: 40px 80px;
+    position: relative;
+    min-height: 346px;
+
+    @media screen and (max-width: 950px) {
+        min-height: 600px;
+    }
+    @media screen and (max-width: 650px) {
+        padding: 40px 15px;  
+        min-height: 450px;  
+    }
+    @media screen and (max-width: 550px) {
+        min-height: 600px;
+    }
+
+    .footer-container {
+        display: flex;
+        align-items: baseline;
+        justify-content: flex-start;
+
+        @media screen and (max-width: 950px) {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            row-gap: 30px;
+        }
+        @media screen and (max-width: 650px) {
+            grid-template-columns: 30% 70%;
+        }
+        @media screen and (max-width: 550px) {
+            grid-template-columns: 50% 50%;       
+        }
+
+        .column {
+            width: 20%;
+
+            @media screen and (max-width: 950px) {
+                width: 100%;
+            }
+            
+            h3 {
+                font-family: $font2;
+                font-weight: 700;
+                font-size: 1.1rem;
+                margin-bottom: 12px;
+
+                @media screen and (max-width: 950px) {
+                    font-size: 1.5rem;
+                }
+            }
+            li {
+                font-family: $font1;
+                font-weight: 400;
+                font-size: 0.8rem;
+                margin-bottom: 2px;
+
+                @media screen and (max-width: 950px) {
+                    font-size: 1rem;
+                }
+            }
+            .contact {
+                display: flex;
+                flex-direction: column;
+                margin-top: 30px;
+
+                strong {
+                    font-family: $font2;
+                    font-size: 0.8rem;
+                    margin-bottom: 2px;
+                }
+                span {
+                    font-family: $font1;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+    .absolute {
+        position: absolute;
+        right: 6%;
+        bottom: 14%;
+
+        @media screen and (max-width: 950px) {
+            bottom: 9%;
+        }
+        @media screen and (max-width: 550px) {
+            left: 3%;
+        }
+
+        svg {
+            height: 28px;
+            width: 28px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-family: $font1;
+            font-size: 1rem;
+            color: white;
+            margin-bottom: 0;
+        }
+    }
+    .help-button {
+        position: fixed;
+        right: 1%;
+        bottom: 1.5%;
+        transition: 1s;
+        z-index: 5;
+
+        @media screen and (max-width: 1000px) {
+            right: 2%;
+        }
+
+        .btn-help {
+            background: $blue;
+            padding: 11px 18px;
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-family: $font2;
+            font-size: 0.7rem;
+            @include center;
+            cursor: pointer;
+            
+            &:active {
+                box-shadow: inset 0 0 0 2.5px rgb(136, 149, 245);
+            }
+
+            i {
+                font-size: 1rem;
+                margin-right: 8px;
+            }
+        }
+    }
+    .bot-container {
+        position: fixed;
+        right: 1%;
+        bottom: 1.5%;
+        height: 450px;
+        width: 280px;
+        box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+        background: white;
+        border-radius: 6px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+
+        .header-container {
+            background: $blue;
+
+            .header-content {
+                @include center;
+                padding: 9px 0;
+
+                h1 {
+                    font-family: $font2;
+                    font-size: 0.8rem;
+                    letter-spacing: 0.5px;
+                    flex-grow: 0.9;
+                    text-align: center;
+                    margin-left: 23px;
+                }
+                button {
+                    background: transparent;
+                    border: none;
+                    @include center;
+                    height: 25px;
+                    width: 25px;
+
+                    i {
+                        color: white;
+                        padding: 7px;
+                        font-size: 0.6rem;
+                        cursor: pointer;
+                        transition: 0.2s;
+
+                        &:hover {
+                            background: rgb(98, 113, 223);
+                            border-radius: 4px;
+                        }
+                        &:active {
+                            box-shadow: 0 0 0 2.5px rgb(136, 149, 245);
+                        }
+                    }
+                }
+            }
+        }
+        .main-container {
+            padding: 15px;
+            flex-grow: 2;
+
+            .main-content {
+                
+                .bot {
+                    display: flex;
+                    align-items: center;
+                    margin-left: 45px;
+                    margin-bottom: 5px;
+
+                    span {
+                        font-family: $font1;
+                        font-size: 0.7rem;
+                        color: black;
+                    }
+                    div {
+                        @include center;
+                        margin: 0 5px;
+
+                        i {
+                            font-size: 0.4rem;
+                            color: black;
+                        }
+                    }
+                }
+                .message1 {
+                    margin-bottom: 5px;
+                    margin-left: 38px;
+
+                    p {
+                        font-family: $font1;
+                        font-size: 0.7rem;
+                        color: black;
+                        background: #f8f9f9;
+                        padding: 5px 5px 5px 10px;
+                        border-radius: 50px;
+                        max-width: 150px;
+                    }
+                }
+                .message2 {
+                    display: flex;
+                    align-items: center;
+
+                    svg {
+                        max-height: 25px;
+                        max-width: 25px;
+                        border-radius: 50px;
+                        margin-right: 13px;
+                    }
+                    p {
+                        font-family: $font1;
+                        font-size: 0.7rem;
+                        color: black;
+                        background: #f8f9f9;
+                        border-radius: 50px;
+                        padding: 5px 5px 5px 12px;
+                        max-width: 185px;
+                    }
+                }
+            }
+        }
+        .bottom-container {
+            padding: 15px;
+
+            .bottom-content {
+                display: flex;
+                align-items: flex-end;
+                flex-direction: column;
+
+                .touch {
+                    font-family: $font1;
+                    font-size: 0.7rem;
+                    color: $blue;
+                    background: transparent;
+                    padding: 4px 10px;
+                    border: 1px solid $blue;
+                    border-radius: 50px;
+                    margin-bottom: 15px;
+                    cursor: pointer;
+                    transition: 0.2s all linear;
+
+                    &:hover {
+                        background: $blue;
+                        color: white;
+                    }
+                }
+                form {
+                    width: 100%;
+                    height: 70px;   
+
+                    textarea {
+                        width: 100%;
+                        height: 100%;
+                        resize: none;
+                        border: 1px solid rgb(216, 220, 222);
+                        border-radius: 4px;
+                        outline: none;
+                        padding: 8px 10px;
+                        transition: 0.2s all linear;
+
+                        &:hover {
+                            border-color: black;
+                        }
+                        &:focus {
+                            border-color: black;
+                        }
+                        &::placeholder {
+                            font-family: $font1;
+                            font-size: 0.7rem;
+                            color: rgb(202, 206, 208);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .appear {
+        opacity: 1;
+        transition: 0.5s;
+        transition-delay: 0.5s;
+    }
+}

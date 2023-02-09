@@ -1,0 +1,45 @@
+@font-face {
+    font-family: "Open4";
+    src: url(../fonts/OpenSans-Regular.ttf);
+}
+@font-face {
+    font-family: "Open7";
+    src: url(../fonts/OpenSans-Bold.ttf);
+}
+
+$blue: #4C5FD5;
+$grayblue: #dadbf1;
+$font1: Open4, sans-serif;
+$font2: Open7, sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+}
+li {
+    list-style-type: none;
+}
+h4 {
+    font-family: $font2;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    color: black;
+}
+main p {
+    font-family: $font1;
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    color: black;
+}
+a {
+    text-decoration: none;
+}
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
